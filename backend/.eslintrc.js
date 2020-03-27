@@ -1,5 +1,6 @@
 module.exports = {
   env: {
+    "jest/globals": true,
     commonjs: true,
     es6: true,
     node: true,
@@ -7,7 +8,7 @@ module.exports = {
   extends: [
     'airbnb-base', 'prettier',
   ],
-  plugins: ['prettier'],
+  plugins: ['prettier', 'jest'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -22,5 +23,10 @@ module.exports = {
     "camelcase": "off",
     "no-unused-vars": ["error", { "argsIgnorePattern": "next" }],
     "func-names": "off",
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
   },
 };
